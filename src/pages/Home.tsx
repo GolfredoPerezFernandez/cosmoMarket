@@ -10,6 +10,14 @@ import CircularProgress from "@mui/material/CircularProgress";
 import { useAccount } from 'wagmi'
 import { Button } from '@web3uikit/core';
 
+import Paper from 'material-ui/Paper';
+
+const styles = {
+  paperContainer: {
+      backgroundImage: `url(https://theuniverse.mypinata.cloud/ipfs/QmYBJaacSHEH8R6oLPJV3xakCgbYqHBqxjw3PPtXgPAMPm)`
+  }
+};
+
 import './pages.css'
 const Home: FC = () => {
   const [blogs, setBlogs] = useState<(object | undefined)[] | undefined>();
@@ -51,7 +59,7 @@ const Home: FC = () => {
   }, [fetchAllNfts, fetchAllNftsByUser, tabValue]);
 
   return (
-    <>
+  <Paper style={styles.paperContainer}>
       <Grid container justifyContent={'center'} alignItems={'center'} direction="column">
       
                 <Typography variant="h3" style={{width:900,color:'white',textAlign:'center',backgroundColor:'transparent'}} >
@@ -74,8 +82,7 @@ const Home: FC = () => {
          <video id="videoBG" poster="poster.JPG" autoPlay={true} muted loop>
             <source src="https://bafybeidzvdmct63yfx7loa2agzbkzwnodifeue2cjzlxhls535j6h2wedi.ipfs.w3s.link/Untitled_design_2.mp4" type="video/mp4"/>
         </video>    
-      </Grid>
-    </>
+      </Grid>      </Paper>
   );
 };
 
