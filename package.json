@@ -55,7 +55,7 @@
     "eject": "react-app-rewired eject",
     "lint:check": "eslint .",
     "lint:fix": "eslint --fix",
-    "github": "git add . && git commit -m 'asd' &&git push origin",
+    "github": "git add . && git commit -m 'asd' && git push origin",
     "prettier:check": "prettier --check .",
     "prettier:fix": "prettier --write \"**/*.{js,jsx,ts,tsx,css,md,json,html}\" .prettierrc --config ./.prettierrc",
     "format": "npm run lint:fix && npm run prettier:fix"
